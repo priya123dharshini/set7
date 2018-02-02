@@ -1,16 +1,18 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <string.h>
 void main()
-{ 
- int i,count=0;
- char s;
- printf("enter a sentence");
- scanf("%s",&s);
- for(i=0;i="/n";i++)
+{
+    char s[200];
+   int count =0,i;
+   printf("enter the string\n");
+ scanf("%[^\n]s", s);
+ for (i = 0;s[i] != '\0';i++)
  {
-  if(s=="/")
-   {
-    count++;
+              if (s[i] == ' ')
+               count++;    
+
     }
-    printf("%d",count);
-    }
-    
+
+    printf("number of words in given string are: %d\n", count + 1);
+
+}
